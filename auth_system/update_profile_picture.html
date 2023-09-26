@@ -1,0 +1,13 @@
+{% extends "includes/header.html" %}
+{% block content %}
+<div class="page-content">
+    <div class="container">
+        <h1>Update Profile Picture</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Update Profile Picture</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
